@@ -1,16 +1,14 @@
 import TierRow from "./TierRow"
 
-interface Props { }
+interface Props {}
 
-const Tierlist = ({  }: Props) => {
+const Tierlist = ({}: Props) => {
   return (
-    <div className="flex flex-col gap-1">
+    <div className="flex flex-col gap-1 md:max-w-[80vw] md:mx-auto">
       <TierRow rank='S' />
       <TierRow rank='A' />
       <TierRow rank='B' />
       <TierRow rank='C' />
-      <TierRow rank='D' />
-      <TierRow rank='E' />
     </div>
   )
 }

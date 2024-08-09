@@ -17,9 +17,12 @@ export const categoryColor = (category: string) => {
 }
 
 //! TODO: Crear funcion para poner un icono en amor
-export const setLoveIcon = (love: string) => {
-  switch(love) {
-    case 'S': return ''
-    default: return ''
+export const setLoveIcon = (affinity: string) => {
+  switch(affinity) {
+    case 'S': return '😍'
+    case 'A': return '😁'
+    case 'B': return '😐'
+    case 'C': return '😒'
+    default: return '👽'
   }
 }

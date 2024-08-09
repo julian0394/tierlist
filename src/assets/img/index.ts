@@ -32,6 +32,12 @@ import expressLogo from './express.png'
 import nodeLogo from './nodejs.png'
 import javascriptLogo from './javascript.png'
 import sassLogo from './sass.png'
+import drizzleLogo from './drizzle.png'
+import firebaseLogo from './firebase.png'
+import mongoDbLogo from './mongo-db.png'
+import postgreSqlLogo from './postgre-sql.png'
+import prismaLogo from './prisma.png'
+import vitestLogo from './vitest.png'
 
 export const LOGOS = {
   antdLogo: antdLogo,
@@ -68,4 +74,10 @@ export const LOGOS = {
   nodeLogo: nodeLogo,
   javascriptLogo: javascriptLogo,
   sassLogo: sassLogo,
+  drizzleLogo: drizzleLogo,
+  firebaseLogo: firebaseLogo,
+  mongoDbLogo: mongoDbLogo,
+  postgreSqlLogo: postgreSqlLogo,
+  prismaLogo: prismaLogo,
+  vitestLogo: vitestLogo,
 }
