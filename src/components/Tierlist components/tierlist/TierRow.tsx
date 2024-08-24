@@ -1,8 +1,8 @@
 import { useAtom } from "jotai"
-import { Ranking, tierlistData } from "../../models/tierlistData"
+import { Ranking, tierlistData } from "../../../models/tierlistData"
 import TierCell from "./TierCard"
 import TierHeader from "./TierHeader"
-import { tierlistSelectedAtom } from "../../store/atoms"
+import { tierlistSelectedAtom } from "../../../store/atoms"
 
 interface Props {
   rank: Ranking

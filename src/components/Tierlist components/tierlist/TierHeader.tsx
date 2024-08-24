@@ -1,7 +1,7 @@
 import { useAtom } from "jotai"
-import { Ranking } from "../../models/tierlistData"
-import { tierlistSelectedAtom } from "../../store/atoms"
-import { setLoveIcon } from "../../utils/utils"
+import { Ranking } from "../../../models/tierlistData"
+import { tierlistSelectedAtom } from "../../../store/atoms"
+import { setLoveIcon } from "../../../utils/utils"
 
 interface Props {
   rank: Ranking

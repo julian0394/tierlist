@@ -38,6 +38,9 @@ import mongoDbLogo from './mongo-db.png'
 import postgreSqlLogo from './postgre-sql.png'
 import prismaLogo from './prisma.png'
 import vitestLogo from './vitest.png'
+import reactTooltipLogo from './react-tooltip.png'
+import reactHotToastLogo from './react-hot-toast.png'
+
 
 export const LOGOS = {
   antdLogo: antdLogo,
@@ -80,4 +83,6 @@ export const LOGOS = {
   postgreSqlLogo: postgreSqlLogo,
   prismaLogo: prismaLogo,
   vitestLogo: vitestLogo,
+  reactTooltipLogo: reactTooltipLogo,
+  reactHotToastLogo: reactHotToastLogo,
 }

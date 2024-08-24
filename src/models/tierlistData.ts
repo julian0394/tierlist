@@ -7,18 +7,17 @@ export interface Category {
 export const CATEGORIES = {
   LANGUAGE: { key: 'language', label: 'Language' },
   STATEMANAGMENT: { key: 'stateManagment', label: 'State Managment' },
-  STYLES: { key: 'style', label: 'Style' },
+  STYLES: { key: 'style', label: 'Styling' },
   UICOMPONENTS: { key: 'uiComponents', label: 'UI Component Library' },
+  GENERAL: { key: 'general', label: 'General' },
   TESTING: { key: 'testing', label: 'Testing' },
   FRAMEWORK: { key: 'framework', label: 'Framework' },
   BUILDTOOLS: { key: 'buildTool', label: 'Build Tool' },
   DATABASE: { key: 'database', label: 'Database' },
   BACKEND: { key: 'backend', label: 'Backend' },
-  GENERAL: { key: 'general', label: 'General' },
 } as const
 export type CategoryLabel = typeof CATEGORIES[keyof typeof CATEGORIES]['label']
 export type Categorykey = typeof CATEGORIES[keyof typeof CATEGORIES]['key']
-
 
 export interface TierlistItem {
   name: string
@@ -63,21 +62,14 @@ export const tierlistData: TierlistItem[] = [
   { name: 'Next JS', affinity: 'F', affection: 'F', logo: LOGOS.nextjsLogo, category: CATEGORIES.FRAMEWORK.key },
   { name: 'Astro', affinity: 'F', affection: 'F', logo: LOGOS.astroLogo, category: CATEGORIES.FRAMEWORK.key },
   { name: 'Storybook', affinity: 'F', affection: 'F', logo: LOGOS.storybookLogo, category: CATEGORIES.GENERAL.key },
-  { name: 'Node JS', affinity: 'B', affection: 'B', logo: LOGOS.nodeLogo, category: CATEGORIES.BACKEND.key },
+  { name: 'Node JS', affinity: 'B', affection: 'A', logo: LOGOS.nodeLogo, category: CATEGORIES.BACKEND.key },
+  { name: 'React Tooltip', affinity: 'S', affection: 'S', logo: LOGOS.reactTooltipLogo, category: CATEGORIES.GENERAL.key },
+  { name: 'React Hot Toast', affinity: 'S', affection: 'S', logo: LOGOS.reactHotToastLogo, category: CATEGORIES.GENERAL.key },
   { name: 'Express', affinity: 'A', affection: 'S', logo: LOGOS.expressLogo, category: CATEGORIES.BACKEND.key },
-  { name: 'Vitest', affinity: 'F', affection: 'F', logo: LOGOS.vitestLogo, category: CATEGORIES.GENERAL.key },
+  { name: 'Vitest', affinity: 'F', affection: 'F', logo: LOGOS.vitestLogo, category: CATEGORIES.TESTING.key },
   { name: 'Drizzle', affinity: 'F', affection: 'F', logo: LOGOS.drizzleLogo, category: CATEGORIES.GENERAL.key },
   { name: 'MongoDB', affinity: 'F', affection: 'F', logo: LOGOS.mongoDbLogo, category: CATEGORIES.DATABASE.key },
   { name: 'Firebase', affinity: 'F', affection: 'F', logo: LOGOS.firebaseLogo, category: CATEGORIES.DATABASE.key },
   { name: 'Prisma', affinity: 'F', affection: 'F', logo: LOGOS.prismaLogo, category: CATEGORIES.GENERAL.key },
   { name: 'Postgre SQL', affinity: 'F', affection: 'F', logo: LOGOS.postgreSqlLogo, category: CATEGORIES.DATABASE.key },
 ]
-// - Framework UI: 💙 React (hooks)
-// - Lenguaje: 😍 TypeScript | 😃 JavaScript | 😐 Java
-// - Estilos: 😍 CSS Modules | 😍 Tailwind | 😃 Styled Components | 🙂 Sass
-// - Manejo de estado: 😍 Zustand | 😍 Jotai | 😍 TanStack Query | 😐 Redux Toolkit | 😐 Context
-// - Componentes UI: 😍 Radix | 😍 Shadcn | 😃 Ant Design | 🙂 Chakra | 🙂 NextUI | 😐 MUI
-// - Pruebas: 🙂 Jest | 🙂 React Testing Library | 🙂 Mock Service Worker
-// - Meta frameworks y build tools: 😍 Next JS | 😍 Vite | 😐 Create React App | 😐 Craco
-// - Base de datos: 🙂 MySql | 😐 SQL Server
-// - Generales: 😍 React Hook Form | 😍 React Router Dom | 😍 Framer Motion | 😍 Zod

@@ -1,5 +1,5 @@
 import { useAtom } from "jotai"
-import { tierlistSelectedAtom } from "../store/atoms"
+import { tierlistSelectedAtom } from "../../store/atoms"
 
 interface Props { }
 
@@ -18,7 +18,7 @@ const TierToggle = ({ }: Props) => {
               className="hidden"
             />
             <label htmlFor="affinity" className={`block px-2 py-1 rounded-md ${tierSelected === 'affinity' ? 'bg-slate-300': 'hover:bg-slate-200 cursor-pointer'} text-slate-800 transition-all duration-150`}>
-              <p className="w-full text-lg font-semibold">Affinity</p>
+              <p className="w-full text-lg font-semibold select-none">Affinity</p>
             </label>
         </li>
         <li className="flex-1 text-center">
@@ -31,7 +31,7 @@ const TierToggle = ({ }: Props) => {
           />
           <label htmlFor="affection" className={`block px-2 py-1 rounded-md ${tierSelected === 'affection' ? 'bg-slate-300': 'hover:bg-slate-200 cursor-pointer'} text-slate-800 transition-all duration-150`}>
               <div className="block">
-                  <div className="w-full text-lg font-semibold">Affection</div>
+                  <div className="w-full text-lg font-semibold select-none">Affection</div>
               </div>
           </label>
         </li>

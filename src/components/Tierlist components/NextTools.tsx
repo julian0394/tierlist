@@ -1,4 +1,4 @@
-import { tierlistData } from "../models/tierlistData"
+import { tierlistData } from "../../models/tierlistData"
 import TierCard from "./tierlist/TierCard"
 
 interface Props {}
@@ -9,7 +9,7 @@ const NextTools = ({}: Props) => {
       <h2 className="font-bold text-xl">Things to learn next (even in order)</h2>
       <div className="flex items-center justify-center gap-5 flex-wrap">
         { tierlistData.map( tierListItem => {
-            return tierListItem.affinity === 'F' && <TierCard itemData={tierListItem} />
+            return tierListItem.affinity === 'F' && <TierCard key={crypto.randomUUID()} itemData={tierListItem} />
           })
         }
       </div>
