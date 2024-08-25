@@ -16,7 +16,7 @@ const CategoryGuide = ({  }: Props) => {
           ))
         }
       </div>
-      <span className="block text-center text-slate-500 italic font-normal mt-2">Click to focus</span>
+      <span className="block text-center text-slate-500 italic font-normal mt-2">Click to focus on category</span>
     </div>
   )
 }

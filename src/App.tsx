@@ -8,6 +8,7 @@ import { FaBeer } from "react-icons/fa"
 import { DevTool } from "@hookform/devtools"
 import CustomTextArea from "./components/DesignSystem/CustomTextArea"
 import CustomSelect from "./components/DesignSystem/CustomSelect"
+import MultiSelect from "./components/DesignSystem/Mutiselect"
 
 const App = () => {
   const methods = useForm({shouldFocusError: true})
@@ -50,6 +51,17 @@ const App = () => {
               {value: '4', label: 'Helio', disabled: false},
             ]}
             required
+          />
+          <MultiSelect
+            methods={methods}
+            name="multiselect"
+            label='labell'
+            options={[
+              {value: '1', label: 'Calcio'},
+              {value: '2', label: 'Plomo', disabled: false},
+              {value: '3', label: 'Potasio', disabled: true},
+              {value: '4', label: 'Helio', disabled: false},
+            ]}
           />
         </div>
         <button className="text-black border border-black" type="submit">submit</button>
