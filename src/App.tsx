@@ -21,7 +21,7 @@ const App = () => {
         <div className="flex items-center">
           <CustomInput methods={methods} name='input1' startIcon={FaBeer} placeholder="Sin label" />
           <CustomInput methods={methods} name='input2' endIcon={FaBeer} size={2} />
-          <CustomInput methods={methods} name="input3" label="DNI" helperText="Con info extra" />
+          <CustomInput methods={methods} name="input3" label="DNI" infoText="Con info extra" required />
           <CustomInput methods={methods} name="input4" label="Nombre completo"  required />
         </div>
         <div className="flex items-center">
@@ -38,6 +38,7 @@ const App = () => {
               {value: '3', label: 'Potasio', disabled: true},
               {value: '4', label: 'Helio', disabled: false},
             ]}
+            infoText="Hola, aquí vengo a dejar un poco de información extra para ayudarle a entender la funcionalidad del campo"
           />
           <CustomSelect
             methods={methods}

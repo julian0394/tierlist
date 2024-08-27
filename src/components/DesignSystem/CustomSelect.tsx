@@ -5,6 +5,7 @@ import { twMerge } from "tailwind-merge"
 import { IoChevronDownSharp } from "react-icons/io5"
 import { LuAsterisk } from "react-icons/lu"
 import { FaCheck } from "react-icons/fa"
+import InfoIcon from "./InfoIcon"
 
 interface Props {
   methods: UseFormReturn<any>
@@ -12,7 +13,7 @@ interface Props {
   options: SelectOption[]
   label?: string
   placeholder?: string
-  helperText?: string
+  infoText?: string
   onChange?: (value: string) => void
   onBlur?: (value: string) => void
   rules?: object
@@ -27,7 +28,7 @@ const CustomSelect = ({
   name,
   options,
   label,
-  helperText,
+  infoText,
   onChange,
   onBlur,
   rules,
@@ -65,11 +66,12 @@ const CustomSelect = ({
     >
       <span className="flex items-start gap-1">
         { label && 
-          <Label className='flex justify-between items-center ml-2 text-sm cursor-pointer text-slate-600 select-none'>
+          <Label className='ml-2 text-sm cursor-pointer text-slate-600 select-none'>
             {label}
           </Label>
         }
         { required && <LuAsterisk className="text-rose-500" size={10} /> }
+        { infoText && <InfoIcon id={name} text={infoText} /> }
       </span>
 
       <Button 
