@@ -1,10 +1,10 @@
-import { FieldError, Input, Label, TextField } from "react-aria-components"
+import { Input, Label, TextField } from "react-aria-components"
 import { useController, UseFormReturn } from "react-hook-form"
 import { IconType } from "react-icons"
 import { twMerge } from "tailwind-merge"
-import { LuAsterisk } from "react-icons/lu";
+import { LuAsterisk } from "react-icons/lu"
 import { setInputSize } from "../../utils/utils"
-import InfoIcon from "./InfoIcon";
+import InfoIcon from "./InfoIcon"
 
 interface Props {
   methods: UseFormReturn<any>

@@ -1,6 +1,6 @@
 import { useController, UseFormReturn } from "react-hook-form"
 import { SelectOption } from "../../models/formTypes"
-import { Select, Label, Button, SelectValue, Popover, ListBox, ListBoxItem, FieldError } from "react-aria-components"
+import { Select, Label, Button, SelectValue, Popover, ListBox, ListBoxItem } from "react-aria-components"
 import { twMerge } from "tailwind-merge"
 import { IoChevronDownSharp } from "react-icons/io5"
 import { LuAsterisk } from "react-icons/lu"
@@ -103,7 +103,7 @@ const CustomSelect = ({
       }
 
       <Popover className="w-[--trigger-width]" placement="bottom">
-        <ListBox selectionBehavior="toggle" className="p-1 m-0 bg-white rounded-md border border-slate-300 text-slate-600 focus:outline-none">
+        <ListBox selectionBehavior="toggle" className="p-1 m-0 max-h-[15rem] overflow-auto bg-white rounded-md border border-slate-300 text-slate-600 focus:outline-none">
           { allowClear && 
             <ListBoxItem
               key={crypto.randomUUID()}

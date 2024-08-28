@@ -25,12 +25,12 @@ const App = () => {
           <CustomInput methods={methods} name="input4" label="Nombre completo"  required />
         </div>
         <div className="flex items-center">
-          <CustomTextArea methods={methods} name="textareaa" />
+          <CustomTextArea methods={methods} name="textarea" />
         </div>
         <div className="flex items-center">
           <CustomSelect
             methods={methods}
-            name="goasjhoa"
+            name="select1"
             label="Elige un elemento"
             options={[
               {value: '1', label: 'Calcio'},
@@ -42,7 +42,7 @@ const App = () => {
           />
           <CustomSelect
             methods={methods}
-            name="qewrrytuyiuo"
+            name="select2"
             label="Des-seleccionable"
             allowClear
             options={[
@@ -50,6 +50,18 @@ const App = () => {
               {value: '2', label: 'Plomo', disabled: false},
               {value: '3', label: 'Potasio', disabled: true},
               {value: '4', label: 'Helio', disabled: false},
+              {value: '11', label: 'Calcio'},
+              {value: '22', label: 'Plomo', disabled: false},
+              {value: '33', label: 'Potasio', disabled: true},
+              {value: '44', label: 'Helio', disabled: false},
+              {value: '111', label: 'Calcio'},
+              {value: '222', label: 'Plomo', disabled: false},
+              {value: '333', label: 'Potasio', disabled: true},
+              {value: '444', label: 'Helio', disabled: false},
+              {value: '1111', label: 'Calcio'},
+              {value: '2222', label: 'Plomo', disabled: false},
+              {value: '3333', label: 'Potasio', disabled: true},
+              {value: '4444', label: 'Helio', disabled: false},
             ]}
             required
           />
