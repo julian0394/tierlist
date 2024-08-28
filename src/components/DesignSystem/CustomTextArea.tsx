@@ -4,12 +4,13 @@ import { IconType } from "react-icons"
 import { twMerge } from "tailwind-merge"
 import { LuAsterisk } from "react-icons/lu";
 import { setInputSize } from "../../utils/utils"
+import InfoIcon from "./InfoIcon";
 
 interface Props {
   methods: UseFormReturn<any>
   name: string
   label?: string
-  helperText?: string
+  infoText?: string
   placeholder?: string
   required?: boolean
   disabled?: boolean
@@ -25,7 +26,7 @@ const CustomTextArea = ({
   name,
   methods,
   label,
-  helperText,
+  infoText,
   startIcon: StartIcon,
   onChange,
   onBlur,
@@ -69,12 +70,8 @@ const CustomTextArea = ({
         <span className="flex items-start gap-1">
           <Label className="cursor-pointer text-slate-600 text-sm ml-2 select-none">{label}</Label>
           { required && <LuAsterisk className="text-rose-500" size={10} />}
+          { infoText && <InfoIcon id={name} text={infoText} /> }
         </span>
-        { helperText &&
-          <span className='mr-2 text-xs font-medium text-slate-500 '>
-            {helperText}
-          </span>
-        }
       </span>
 
       <span className="relative">
