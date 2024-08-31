@@ -9,6 +9,7 @@ import { DevTool } from "@hookform/devtools"
 import CustomTextArea from "./components/DesignSystem/CustomTextArea"
 import CustomSelect from "./components/DesignSystem/CustomSelect"
 import MultiSelect from "./components/DesignSystem/Mutiselect"
+import CustomButton from "./components/DesignSystem/CustomButton"
 
 const App = () => {
   const methods = useForm({shouldFocusError: true})
@@ -77,8 +78,8 @@ const App = () => {
             ]}
           />
         </div>
-        <button className="text-black border border-black" type="submit">submit</button>
-        <button className="text-black border border-black" type="button" onClick={() => console.log(methods.formState.errors)}>errores</button>
+        <CustomButton text="submit" type="submit" />
+        <CustomButton variant='secondary' text="errores" onClick={() => console.log(methods.formState.errors)} />
       </form>
     
       <div className="m-5">

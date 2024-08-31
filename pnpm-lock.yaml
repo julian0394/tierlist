@@ -9,7 +9,7 @@ specifiers:
   '@typescript-eslint/parser': ^7.15.0
   '@vitejs/plugin-react': ^4.3.1
   autoprefixer: ^10.4.19
-  cva: ^0.0.0
+  class-variance-authority: ^0.7.0
   eslint: ^8.57.0
   eslint-plugin-react-hooks: ^4.6.2
   eslint-plugin-react-refresh: ^0.4.7
@@ -21,6 +21,7 @@ specifiers:
   react-dom: ^18.3.1
   react-hook-form: ^7.52.2
   react-icons: ^5.2.1
+  react-spinners: ^0.14.1
   react-tooltip: ^5.28.0
   tailwind-merge: ^2.4.0
   tailwindcss: ^3.4.7
@@ -29,7 +30,7 @@ specifiers:
 
 dependencies:
   '@tanstack/react-table': 8.20.1_nnrd3gsncyragczmpvfhocinkq
-  cva: 0.0.0
+  class-variance-authority: 0.7.0
   framer-motion: 11.3.30_nnrd3gsncyragczmpvfhocinkq
   jotai: 2.9.2_3vdbhqr2ncalcx7opnshezpx3q
   react: 18.3.1
@@ -37,6 +38,7 @@ dependencies:
   react-dom: 18.3.1_react@18.3.1
   react-hook-form: 7.52.2_react@18.3.1
   react-icons: 5.2.1_react@18.3.1
+  react-spinners: 0.14.1_nnrd3gsncyragczmpvfhocinkq
   react-tooltip: 5.28.0_nnrd3gsncyragczmpvfhocinkq
   tailwind-merge: 2.4.0
 
@@ -2724,12 +2726,23 @@ packages:
       fsevents: 2.3.3
     dev: true
 
+  /class-variance-authority/0.7.0:
+    resolution: {integrity: sha512-jFI8IQw4hczaL4ALINxqLEXQbWcNjoSkloa4IaufXCJr6QawJyw7tuRysRsrE8w2p/4gGaxKIt/hX3qz/IbD1A==}
+    dependencies:
+      clsx: 2.0.0
+    dev: false
+
   /classnames/2.5.1:
     resolution: {integrity: sha512-saHYOzhIQs6wy2sVxTM6bUDsQO4F50V9RQ22qBpEdCW+I+/Wmke2HOl6lS6dTpdxVhb88/I6+Hs+438c3lfUow==}
     dev: false
 
   /client-only/0.0.1:
     resolution: {integrity: sha512-IV3Ou0jSMzZrd3pZ48nLkT9DA7Ag1pnPzaiQhpW7c3RbcqqzvzzVu+L8gfqMp/8IM2MQtSiqaCxrrcfu8I8rMA==}
+    dev: false
+
+  /clsx/2.0.0:
+    resolution: {integrity: sha512-rQ1+kcj+ttHG0MKVGBUXwayCCF1oh39BF5COIpRzuCEv8Mwjv0XucrI2ExNTOn9IlLifGClWQcU9BrZORvtw6Q==}
+    engines: {node: '>=6'}
     dev: false
 
   /clsx/2.1.1:
@@ -2803,10 +2816,6 @@ packages:
 
   /csstype/3.1.3:
     resolution: {integrity: sha512-M1uQkMl8rQK/szD0LNhtqxIPLpimGm8sOBwU7lLnCpSbTyY3yeU1Vc7l4KT5zT4s/yOxHH5O7tIuuLOCnLADRw==}
-
-  /cva/0.0.0:
-    resolution: {integrity: sha512-KPdxLxXhIzmCNtGpqdONKC1JwEx0cDH8cnYh7KYFxO7JYf4DqqtcLg6g+1QA0SlIdME18n9m337DOxIlrsSF5Q==}
-    dev: false
 
   /debug/4.3.6:
     resolution: {integrity: sha512-O/09Bd4Z1fBrU4VzkhFqVgpPzaGbw6Sm9FEkBT1A/YBXQFGuuSxa1dN2nxgxS34JmKXqYx8CZAwEVoJFImUXIg==}
@@ -3852,6 +3861,16 @@ packages:
     dependencies:
       react-dom: 18.3.1_react@18.3.1
     dev: true
+
+  /react-spinners/0.14.1_nnrd3gsncyragczmpvfhocinkq:
+    resolution: {integrity: sha512-2Izq+qgQ08HTofCVEdcAQCXFEYfqTDdfeDQJeo/HHQiQJD4imOicNLhkfN2eh1NYEWVOX4D9ok2lhuDB0z3Aag==}
+    peerDependencies:
+      react: ^16.0.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.0.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.3.1
+      react-dom: 18.3.1_react@18.3.1
+    dev: false
 
   /react-stately/3.32.1_react@18.3.1:
     resolution: {integrity: sha512-znw+bqHJk1fvv34O3HoVH61otyYJomRu1gI7A4B3UHCnSFS6E6nMI6D3nRv9RrAWhf4ekLLg35FwDTHDcG1zdg==}
