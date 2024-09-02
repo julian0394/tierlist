@@ -6,6 +6,7 @@ import { twMerge } from 'tailwind-merge'
 import { SelectOption } from '../../models/formTypes'
 import { useController, UseFormReturn } from 'react-hook-form'
 import InfoIcon from './InfoIcon'
+import { useState } from 'react'
 
 interface Props {
   methods: UseFormReturn<any>
@@ -32,6 +33,8 @@ const MultiSelect = ({
   disabled = false,
   placeholder = 'Seleccionar',
 }: Props) => {
+  const [isOpen, setIsOpen] = useState(false)
+
   const { control } = methods
   const { field, fieldState } = useController({ 
     name,
@@ -50,17 +53,21 @@ const MultiSelect = ({
 
     field.onChange(newValues)
     if(onChange) onChange(newValues)
+
+    setIsOpen(true)
   }
 
   return (
     <Select
       name={field.name}
       onSelectionChange={handleSelectionChange}
+      onOpenChange={setIsOpen}
       className="inline-flex flex-col min-w-[5rem]"
       onBlur={() => {
         field.onBlur()
         if(onBlur) onBlur(field.value)
       }}
+    isOpen={isOpen}
     >
       <span className="flex items-start gap-1">
         { label && 

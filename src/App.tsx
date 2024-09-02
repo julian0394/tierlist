@@ -44,6 +44,19 @@ const App = () => {
           <CustomSelect
             methods={methods}
             name="select2"
+            label="Elige un custom"
+            optionLabel="valor"
+            optionValue="texto"
+            options={[
+              {valor: '1', texto: 'Calcio'},
+              {valor: '2', texto: 'Plomo'},
+              {valor: '3', texto: 'Potasio'},
+              {valor: '4', texto: 'Helio'},
+            ]}
+          />
+          <CustomSelect
+            methods={methods}
+            name="select3"
             label="Des-seleccionable"
             allowClear
             options={[
@@ -77,6 +90,17 @@ const App = () => {
               {value: '4', label: 'Helio', disabled: false},
             ]}
           />
+          {/* <CustomSelect
+            methods={methods}
+            name="select1"
+            label="Elige un elemento"
+            options={[
+              {value: '1', label: 'Calcio', },
+              {value: '2', label: 'Plomo', },
+              {value: '3', label: 'Potasio', },
+              {value: '4', label: 'Helio', },
+            ]}
+          /> */}
         </div>
         <CustomButton text="submit" type="submit" />
         <CustomButton variant='secondary' text="errores" onClick={() => console.log(methods.formState.errors)} />

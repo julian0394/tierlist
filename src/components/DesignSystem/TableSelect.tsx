@@ -1,15 +1,15 @@
+import { Button, Label, ListBox, ListBoxItem, Popover, Select, SelectValue } from "react-aria-components"
 import { useController, UseFormReturn } from "react-hook-form"
-import { Select, Label, Button, SelectValue, Popover, ListBox, ListBoxItem } from "react-aria-components"
+import { LuAsterisk } from "react-icons/lu"
+import InfoIcon from "./InfoIcon"
 import { twMerge } from "tailwind-merge"
 import { IoChevronDownSharp } from "react-icons/io5"
-import { LuAsterisk } from "react-icons/lu"
 import { FaCheck } from "react-icons/fa"
-import InfoIcon from "./InfoIcon"
 
 interface Props {
   methods: UseFormReturn<any>
   name: string
-  options: any[]
+  options: SelectOption[]
   label?: string
   placeholder?: string
   infoText?: string
@@ -20,11 +20,9 @@ interface Props {
   disabled?: boolean
   allowClear?: boolean
   flexSize?: 0.5 | 1 | 2 | 3
-  optionValue?: string
-  optionLabel?: string
 }
 
-const CustomSelect = ({
+const TableSelect = ({
   methods,
   name,
   options,
@@ -38,8 +36,6 @@ const CustomSelect = ({
   disabled = false,
   allowClear = false,
   flexSize = 1,
-  optionValue = 'value',  // Default to 'value'
-  optionLabel = 'label',  // Default to 'label'
 }: Props) => {
   const { control } = methods
   const { field, fieldState } = useController({ 
@@ -47,6 +43,7 @@ const CustomSelect = ({
     control,
     rules: {
       required: { value: required, message: 'Required field' },
+      // validate //TODO: rules para validar
     }
   })
 
@@ -104,51 +101,13 @@ const CustomSelect = ({
         : <span className="h-[16px]" />
       }
 
-      <Popover className="w-[--trigger-width]" placement="bottom">
-        <ListBox selectionBehavior="toggle" className="p-1 m-0 max-h-[15rem] overflow-auto bg-white rounded-md border border-slate-300 text-slate-600 focus:outline-none">
-          { allowClear && 
-            <ListBoxItem
-              key='placeholder'
-              id='placeholder'
-              textValue={placeholder}
-              className={({ isDisabled }) => (
-                twMerge(
-                `w-full flex items-center justify-between p-2 
-                rounded-md text-sm cursor-pointer select-none 
-                hover:bg-sky-100 focus:outline-none focus:bg-sky-100`,
-                isDisabled && 'bg-gray-100 text-gray-400 italic pointer-events-none'
-              ))}
-              isDisabled={!Boolean(methods.watch(name))}
-            >
-              {placeholder}
-            </ListBoxItem>
-          }
-          { options.map(option => (
-            <ListBoxItem
-              key={option[optionValue]}
-              id={option[optionValue]}
-              textValue={option[optionLabel]}
-              className={({ isSelected, isDisabled }) => (
-                twMerge(
-                  `w-full flex items-center justify-between p-2 rounded-md text-sm cursor-pointer select-none hover:bg-sky-100 focus:outline-none focus:bg-sky-100`,
-                  isSelected && 'text-sky-600 font-medium',
-                  isDisabled && 'bg-gray-100 text-gray-400 italic pointer-events-none'
-                )
-              )}
-              isDisabled={option.disabled}
-            >
-              {({ isSelected }) => (
-                <>
-                  <span>{option[optionLabel]}</span>
-                  {isSelected && <FaCheck size={12} />}
-                </>
-              )}
-            </ListBoxItem>
-          ))}
-        </ListBox>
+      <Popover className="w-[--trigger-width] p-1 m-0 max-h-[15rem] overflow-auto bg-white rounded-md border border-slate-300 text-slate-600 focus:outline-none" placement="bottom">
+        <table>
+          th
+        </table>
       </Popover>
     </Select>
   )
 }
 
-export default CustomSelect
+export default TableSelect
