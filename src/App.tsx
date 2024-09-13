@@ -10,6 +10,8 @@ import CustomTextArea from "./components/DesignSystem/CustomTextArea"
 import CustomSelect from "./components/DesignSystem/CustomSelect"
 import MultiSelect from "./components/DesignSystem/Mutiselect"
 import CustomButton from "./components/DesignSystem/CustomButton"
+import CustomTable from "./components/DesignSystem/CustomTable"
+import DataTable from "./components/DesignSystem/DataTable"
 
 const App = () => {
   const methods = useForm({shouldFocusError: true})
@@ -100,10 +102,13 @@ const App = () => {
               {value: '3', label: 'Potasio', },
               {value: '4', label: 'Helio', },
             ]}
-          /> */}
+          /> */}  
         </div>
         <CustomButton text="submit" type="submit" />
         <CustomButton variant='secondary' text="errores" onClick={() => console.log(methods.formState.errors)} />
+
+        <CustomTable descriptiveName="probando-tabla" />
+        <DataTable descriptiveName="probando-datatable" />
       </form>
     
       <div className="m-5">
