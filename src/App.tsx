@@ -47,13 +47,12 @@ const App = () => {
             methods={methods}
             name="select2"
             label="Elige un custom"
-            optionLabel="valor"
-            optionValue="texto"
+            required
             options={[
-              {valor: '1', texto: 'Calcio'},
-              {valor: '2', texto: 'Plomo'},
-              {valor: '3', texto: 'Potasio'},
-              {valor: '4', texto: 'Helio'},
+              {value: '1', label: 'Calcio'},
+              {value: '2', label: 'Plomo'},
+              {value: '3', label: 'Potasio'},
+              {value: '4', label: 'Helio'},
             ]}
           />
           <CustomSelect
@@ -61,6 +60,17 @@ const App = () => {
             name="select3"
             label="Des-seleccionable"
             allowClear
+            options={[
+              {value: '1', label: 'Calcio'},
+              {value: '2', label: 'Plomo', disabled: false},
+              {value: '3', label: 'Potasio', disabled: true},
+              {value: '4', label: 'Helio', disabled: false},
+            ]}
+          />
+          <MultiSelect
+            methods={methods}
+            name="multiselect"
+            label='labell'
             options={[
               {value: '1', label: 'Calcio'},
               {value: '2', label: 'Plomo', disabled: false},
@@ -79,30 +89,7 @@ const App = () => {
               {value: '3333', label: 'Potasio', disabled: true},
               {value: '4444', label: 'Helio', disabled: false},
             ]}
-            required
           />
-          <MultiSelect
-            methods={methods}
-            name="multiselect"
-            label='labell'
-            options={[
-              {value: '1', label: 'Calcio'},
-              {value: '2', label: 'Plomo', disabled: false},
-              {value: '3', label: 'Potasio', disabled: true},
-              {value: '4', label: 'Helio', disabled: false},
-            ]}
-          />
-          {/* <CustomSelect
-            methods={methods}
-            name="select1"
-            label="Elige un elemento"
-            options={[
-              {value: '1', label: 'Calcio', },
-              {value: '2', label: 'Plomo', },
-              {value: '3', label: 'Potasio', },
-              {value: '4', label: 'Helio', },
-            ]}
-          /> */}  
         </div>
         <CustomButton text="submit" type="submit" />
         <CustomButton variant='secondary' text="errores" onClick={() => console.log(methods.formState.errors)} />
